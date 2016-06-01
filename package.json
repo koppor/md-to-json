@@ -1,0 +1,26 @@
+{
+  "name": "md-to-json",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Parse Markdown to JSON.",
+  "dependencies": {
+    "gulp-util": "^2.2.0",
+    "marked": "^0.3.0",
+    "gulp-json-transform": "^0.3.0"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "markdown",
+    "marked",
+    "json"
+  ]
+}
