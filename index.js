@@ -1,6 +1,9 @@
 var gutil = require('gulp-util');
 var marked = require('marked');
 var jsontransform = require('gulp-json-transform');
+var through = require('through2');
+
+const PLUGIN_NAME = 'md-to-json';
 
 function Renderer(options){
   this.options = options || {};
@@ -88,23 +91,32 @@ marked.setOptions({
   renderer: new Renderer()
 });
 
-function parse( file ){
-  if( !file.isBuffer() ) return;
+function parse( text ){
+  var json = '{' + marked( text ) + '}';
+  json = json.replace(/:,/g, ':"",');
+  json = JSON.parse(json);
+  json = JSON.stringify(json, null, 2);
 
-  var path = file.relative.split('.').shift(/\//g, '.');
-  var json = this.parseText(parse.body);
-
-  file.path = gutil.replaceExtension(file.path, '.json');
-  file.contents = new Buffer( markup );
-
-  return file;
-}
-
-function parseText( text ){
-  var mk = '{' + marked(text) + '}';
-  mk = JSON.parse(mk);
-  return JSON.stringify(mk, null, 2);
+  return json;
 }
 
 this.parse = parse;
-this.parseText = parseText;
+
+module.exports = function(){
+  var stream = through.obj(function( file, enc, callback ){
+    if (file.isStream()) {
+        return self.emit('error', new PluginError(PLUGIN_NAME, 'Streaming not supported'));
+    }
+    if (file.isBuffer()) {
+      var path = file.relative.split('.').shift(/\//g, '.');
+      var inputParsed = parse(file.contents.toString(enc));
+
+      file.path = gutil.replaceExtension(file.path, '.json');
+      file.contents = new Buffer( inputParsed );
+      this.push(file);
+      callback();
+    }
+  });
+
+  return stream;
+};

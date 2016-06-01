@@ -25,16 +25,21 @@ Input: test.md
 ```markdown
 # Name
 My name
+
 # Attributes
 - Color Vision
 - Hair on Head
+
 # MDCode
       My name __is__ md:
       - A
       - B
       - C
+
 # End Tag
 Text
+
+# Empty
 ```
 Output: test.json
 ```json
@@ -45,6 +50,7 @@ Output: test.json
     "Hair on Head"
   ],
   "MDCode": "My name __is__ md:\n- A\n - B\n- C",
-  "End_Tag": "Text"
+  "End_Tag": "Text",
+  "Empty": ""
 }
 ```

@@ -1,21 +1,21 @@
 {
   "name": "md-to-json",
-  "version": "1.0.0",
-  "license": "MIT",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kleinech/md-to-json.git"
+  },
+  "author": {
+    "name": "Christoph Kleine",
+    "url": "https://github.com/kleinech"
+  },
+  "license": "ISC",
   "description": "Parse Markdown to JSON.",
-  "dependencies": {
-    "gulp-util": "^2.2.0",
-    "marked": "^0.3.0",
-    "gulp-json-transform": "^0.3.0"
-  },
   "devDependencies": {
+      "gulp-util": "^2.2.0",
+      "marked": "^0.3.0",
+      "through2": "^2.0.1"
   },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "gulp",
     "gulpplugin",
