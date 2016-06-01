@@ -1,6 +1,5 @@
 var gutil = require('gulp-util');
 var marked = require('marked');
-var jsontransform = require('gulp-json-transform');
 var through = require('through2');
 
 const PLUGIN_NAME = 'md-to-json';
@@ -85,15 +84,18 @@ Renderer.prototype.image = function(href, title, text){
 
 Renderer.prototype.text = function(text){
   return '"' + text + '"';
-},
+};
+
+var renderer = new Renderer();
 
 marked.setOptions({
-  renderer: new Renderer()
+  renderer: renderer
 });
 
 function parse( text ){
+  renderer.firstHeader = true;
   var json = '{' + marked( text ) + '}';
-  json = json.replace(/:,/g, ':"",');
+  json = json.replace(/""/g, '').replace(/:,/g, ':"",');
   json = JSON.parse(json);
   json = JSON.stringify(json, null, 2);
 
