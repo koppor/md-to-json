@@ -1,6 +1,6 @@
 {
   "name": "md-to-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/kleinech/md-to-json.git"
