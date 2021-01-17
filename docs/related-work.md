@@ -21,7 +21,6 @@ md2json.parse('This is a markdown content');
     raw: "This is a markdown content\n"
 }
 */
-
 ```
 
 #### Multiline Content
@@ -65,3 +64,9 @@ Code repository is 404
 Converts markdown to RDF-A.
 
 Parses Markdown using pattern matching.
+
+## [md-schema](https://github.com/f43i4n/md-schema)
+
+First concept notes exist (at https://github.com/f43i4n/md-schema/tree/master/docs).
+An outline Python implementation exists.
+
