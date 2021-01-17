@@ -2,7 +2,6 @@
 
 This lists other alternatives.
 
-
 ## [md-to-json](https://www.npmjs.com/package/md-2-json)
 
 > https://github.com/ajithr/md-2-json
@@ -61,3 +60,8 @@ md2json.parse(mdContent);
 
 Code repository is 404
 
+## [md-to-rdfa](https://github.com/PatternAtlas/md-to-rdfa)
+
+Converts markdown to RDF-A.
+
+Parses Markdown using pattern matching.
