@@ -2,6 +2,12 @@
 
 This lists other alternatives.
 
+## [markup-it](https://github.com/GitbookIO/markup-it)
+
+Parses to some XML-tree.
+
+Example: <https://github.com/GitbookIO/markup-it/blob/master/__tests__/__fixtures__/from-markdown/headings/line-h2/output.js>
+
 ## [md-to-json](https://www.npmjs.com/package/md-2-json)
 
 > https://github.com/ajithr/md-2-json
