@@ -2,6 +2,53 @@
 
 This lists other alternatives.
 
+## [markdown-to-json](https://github.com/MoOx/markdown-to-json)
+
+````markdown
+---
+test: a
+test2: b
+---
+
+## Test
+
+[link](href)
+
+```js
+console.log(window);
+```
+````
+
+to
+
+```js
+{
+  "test": "a",
+  "test2": "b",
+  "headings": [
+    {
+      "id": "test",
+      "level": 2,
+      "text": "Test"
+    }
+  ],
+  "body": {
+    "tag": "div",
+    "children": [
+      {
+        "tag": "h2",
+        "props": {
+          "id": "test"
+        },
+        "children": [
+          //...
+        ]
+      }
+    ]
+  }
+}
+```
+
 ## [markup-it](https://github.com/GitbookIO/markup-it)
 
 Parses to some XML-tree.
