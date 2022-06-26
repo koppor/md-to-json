@@ -2,6 +2,25 @@
 
 This lists other alternatives.
 
+- [mdast](#mdast)
+- [md-schema](#md-schema)
+- [markdown-to-json](#markdown-to-json)
+- [markup-it](#markup-it)
+- [md-to-json](#md-to-json)
+- [md2json](#md2json)
+- [md-to-rdfa](#md-to-rdfa)
+
+## [mdast](https://github.com/syntax-tree/mdast)
+
+> Markdown Abstract Syntax Tree.
+>
+> mdast is a specification for representing markdown in a syntax tree. It implements unist. It can represent several flavours of markdown, such as CommonMark and GitHub Flavored Markdown.
+
+## [md-schema](https://github.com/f43i4n/md-schema)
+
+First concept notes exist (at <https://github.com/f43i4n/md-schema/tree/master/docs>).
+An outline Python implementation exists.
+
 ## [markdown-to-json](https://github.com/MoOx/markdown-to-json)
 
 ````markdown
@@ -10,7 +29,7 @@ test: a
 test2: b
 ---
 
-## Test
+### Test
 
 [link](href)
 
@@ -117,9 +136,3 @@ Code repository is 404
 Converts markdown to RDF-A.
 
 Parses Markdown using pattern matching.
-
-## [md-schema](https://github.com/f43i4n/md-schema)
-
-First concept notes exist (at https://github.com/f43i4n/md-schema/tree/master/docs).
-An outline Python implementation exists.
-

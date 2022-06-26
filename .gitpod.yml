@@ -1,0 +1,6 @@
+vscode:
+  extensions:
+    - DavidAnson.vscode-markdownlint
+    - valentjn.vscode-ltex
+    # One needs to reconfigure "Markdown > Extesion > Toc: Levels" to "2..2"
+    - yzhang.markdown-all-in-one
