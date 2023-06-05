@@ -15,7 +15,7 @@ Use it:
 ```javascript
 gulp.task('md2json_task', function() {
   return gulp.src('./file.md')
-  .pipe(md2json.parse())
+  .pipe(md2json())
   .pipe(gulp.dest('.'));
 })
 ```
